@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body onload="typeWriter2(),typeWriter()">
+	<!----hero Section start---->
+
+	<div class="hero">
+		<nav>
+			<h2 class="logo">Portfolio</h2>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#aboutme">About Me</a></li>
+				<li><a href="#Skills">Skills</a></li>
+				<li><a href="#Contactme">Contact Me</a></li>
+			</ul>
+		</nav>
+
+		<div class="content">
+			<h4 id="demo0"></h4>
+			<h1>Pranjal <span>Tyagi</span></h1>
+			<h3>I am a Technology Enthusiast.</h3>
+			</div>
+		</div>
+	</div>
+
+	<!----About section start---->
+	<section id="aboutme" class="about">
+		<div class="main">
+			<img src="img/main-img.png">
+			<div class="about-text">
+				<h2>About Me</h2>
+				<p id="demo1"></p>
+			</div>
+		</div>
+	</section>
+
+	<!-- ---Skills start--------- -->
+	<div id="Skills" class="service">
+		<div class="title">
+			<h2>Skills</h2>
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<i class="fas fa-bars"></i>
+				<h5>Web Development</h5>
+				<div class="pra">
+					<p>I am genuinely very proud of my website building ability.</p>
+
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="far fa-user"></i>
+				<h5>Coding</h5>
+				<div class="pra">
+					<p>Secondly, I have some good coding skills.</p>
+					<p style="text-align: center;">
+						<a class="button" href="#">Read More</a>
+					</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!------Contact Me------>
+	<div id="Contactme" class="contact-me">
+		<p>Contact.</p>
+		<a class="button-two" href="#">Let's Have a Conversation</a>
+	</div>
+
+	<!------footer start--------->
+	<footer>
+		<p>Pranjal Tyagi</p>
+		<div class="social">
+			<a href="https://github.com/Pranjaltyagi-001" target="_blank"><i class="fab fa-github"></i></a>
+			<a href="https://www.instagram.com/_pranjaltyagi_/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+		</footer>
+</body>
+<script>
+let i = 0;
+let txt = "At Chitkara University, I'm currently pursuing B.E. in CSE. I am a versatile individual with a few aces under my sleeve.I enjoy collaborating on various technologies with a variety of people."; /* The text */
+var speed = 200; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo1").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+let m=0;
+let text="Hello, my name is";
+var speeed = 100;
+function typeWriter2(){
+	if(m<text.length){
+		document.getElementById("demo0").innerHTML += text.charAt(m);
+		m++;
+		setTimeout(typeWriter2,speeed)
+	}
+}
+</script>
+</html>
